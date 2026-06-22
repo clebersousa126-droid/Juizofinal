@@ -1,96 +1,149 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos de Programação</title>
+    <link rel="stylesheet" href="historia.css">
+</head>
+<body>
+<div class="container">
+    <div class="botoes">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="historia.html" class="btn">⬅ Voltar</a>
+        <a href="fluxograma.html" class="btn">➡ Próximo</a>
+    </div>
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #0078D7, #0A2342);
-    min-height:100vh;
-    padding:30px;
-}
+    <h1>📘 Conceito de Programação</h1>
 
-.container{
-    max-width:1000px;
-    margin:0 auto;
-}
+    <div class="conteudo">
 
-h1{
-    text-align:center;
-    color:white;
-    margin-bottom:30px;
-    font-size:2.5rem;
-}
+        <h2>💡 O que é Programação?</h2>
 
-.conteudo{
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
-}
+        <p>
+            Programação é o processo de criar um conjunto de
+            instruções lógicas que dizem ao computador exatamente o que ele deve fazer.
+            Os computadores são máquinas incríveis, mas não pensam por si mesmos;
+            eles precisam de um roteiro passo a passo, escrito de forma clara e organizada,
+            para resolver problemas ou executar tarefas.
+        </p>
 
-.conteudo h2{
-    color:#0A2342;
-    margin-top:25px;
-    margin-bottom:10px;
-    border-left:5px solid #0078D7;
-    padding-left:10px;
-}
+        <p>
+            Essas instruções se transformam em softwares. Hoje, a programação está
+            presente em tudo: nos sites que você navega, nos aplicativos do seu celular,
+            nos jogos digitais, nos sistemas bancários e até no funcionamento de carros
+            modernos e eletrodomésticos.
+        </p>
 
-.conteudo p{
-    color:#333;
-    line-height:1.8;
-    margin-bottom:15px;
-    text-align:justify;
-}
+        <h2>🧠 Como funciona na prática?</h2>
 
-.conteudo ul{
-    margin-left:25px;
-}
+        <p>
+            Imagine que programar é muito parecido com <strong>escrever uma receita de bolo</strong>.
+            Se você pular a etapa de "bater as claras em neve" ou colocar o bolo no forno
+            antes de misturar a farinha, o resultado final dará errado.
+        </p>
 
-.conteudo li{
-    margin-bottom:8px;
-}
+        <p>
+            Na programação, nós dividimos um problema grande em partes menores (chamamos isso de
+            pensamento computacional) e criamos algoritmos. Como o computador não entende o
+            nosso idioma humano, nós usamos uma <strong>linguagem de programação</strong> (como
+            Python, JavaScript ou C++) para traduzir essas ordens em algo que a máquina consiga
+            processar e executar de forma automática e eficiente.
+        </p>
 
-.botoes{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin-top:25px;
-}
+        <h2>🚀 A Importância da Programação</h2>
 
-.btn{
-    background:#0078D7;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:10px;
-    font-weight:bold;
-    transition:0.3s;
-}
+        <p>
+            No mundo moderno, saber programar vai além de criar sistemas: desenvolve o raciocínio
+            lógico e a capacidade de resolver problemas complexos. É a programação que permite
+            automatizar tarefas repetitivas, processar volumes gigantescos de dados em segundos e
+            conectar pessoas ao redor do mundo instantaneamente.
+        </p>
 
-.btn:hover{
-    background:#005fa3;
-    transform:translateY(-3px);
-}
+    </div>
+    <section class="avaliacao">
+        <h2>📝 Teste seus conhecimentos</h2>
 
-@media(max-width:768px){
+        <p>1. O que é programação no contexto da tecnologia?</p>
+        <label><input type="radio" name="c1" value="0"> Apenas o ato de ligar e configurar componentes físicos de um computador.</label><br>
+        <label><input type="radio" name="c1" value="1"> O processo de criar instruções lógicas e organizadas para que o computador execute tarefas.</label><br>
+        <label><input type="radio" name="c1" value="0"> Um sistema de navegação na internet que substitui os navegadores comuns.</label>
 
-    body{
-        padding:15px;
-    }
+        <p>2. Podemos comparar a lógica de programação a qual situação do dia a dia?</p>
+        <label><input type="radio" name="c2" value="0"> Ao ato de olhar para uma foto antiga.</label><br>
+        <label><input type="radio" name="c2" value="1"> A uma receita de bolo, que exige um passo a passo ordenado para dar certo.</label><br>
+        <label><input type="radio" name="c2" value="0"> A dormir, pois o processo acontece de forma totalmente inconsciente.</label>
 
-    h1{
-        font-size:2rem;
-    }
+        <p>3. Para que serve uma linguagem de programação como Python ou C++?</p>
+        <label><input type="radio" name="c3" value="1"> Para traduzir as ordens humanas em algo que a máquina consiga processar.</label><br>
+        <label><input type="radio" name="c3" value="0"> Para aumentar a velocidade física do processador do computador.</label><br>
+        <label><input type="radio" name="c3" value="0"> Para conectar cabos de rede de internet local de forma automática.</label>
 
-    .conteudo{
-        padding:20px;
-    }
+        <p>4. O que as instruções organizadas geradas pela programação se tornam?</p>
+        <label><input type="radio" name="c4" value="0"> Apenas componentes de hardware externos.</label><br>
+        <label><input type="radio" name="c4" value="1"> Softwares e aplicativos presentes no nosso cotidiano.</label>
 
-    .botoes{
-        flex-direction:column;
-        align-items:center;
-    }
-}
+        <button onclick="corrigirConceitos()">Ver Resultado</button>
+
+        <div id="resultadoConceitos"></div>
+    </section>
+
+    <script>
+        function calcular(prefixo, total, resultadoId){
+
+            let pontos = 0;
+
+            for(let i = 1; i <= total; i++){
+
+                let resposta = document.querySelector(
+                    `input[name="${prefixo}${i}"]:checked`
+                );
+
+                if(resposta){
+                    pontos += parseInt(resposta.value);
+                }
+            }
+
+            let mensagem = "";
+
+            if(pontos === 4){
+                mensagem = "🏆 Excelente! Você dominou o conteúdo.";
+            }
+            else if(pontos >= 2){
+                mensagem = "👍 Bom trabalho! Continue estudando.";
+            }
+            else{
+                mensagem = "📚 Revise o conteúdo e tente novamente.";
+            }
+
+            document.getElementById(resultadoId).innerHTML =
+                `<h3>${pontos}/4 acertos</h3><p>${mensagem}</p>`;
+        }
+
+        function corrigirHistoria(){
+            calcular("q",4,"resultadoHistoria");
+        }
+
+        function corrigirConceitos(){
+            calcular("c",4,"resultadoConceitos");
+        }
+
+        function corrigirFluxograma(){
+            calcular("f",4,"resultadoFluxograma");
+        }
+
+        function corrigirAplicacoes(){
+            calcular("a",4,"resultadoAplicacoes");
+        }
+    </script>
+    <div class="botoes">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="historia.html" class="btn">⬅ Voltar</a>
+        <a href="fluxograma.html" class="btn">➡ Próximo</a>
+    </div>
+ 
+    <div class="progresso">
+        <div class="barra" style="width:60%;">60%</div>
+    </div>
+</div>
+</body>
+</html>
