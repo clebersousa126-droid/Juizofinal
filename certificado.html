@@ -1,69 +1,116 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificado</title>
-    <link rel="stylesheet" href="certificado.css">
+    <title>Conceitos de Programação</title>
+    <link rel="stylesheet" href="historia.css">
 </head>
 <body>
-<a href="integrantes.html" class="btn">
-    🏠 Voltar ao Início
-</a>
 <div class="container">
+    <div class="botoes">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="historia.html" class="btn">⬅ Voltar</a>
+        <a href="fluxograma.html" class="btn">➡ Próximo</a>
+    </div>
 
-    <<div class="certificado">
+    <h1>📘 Conceito de Programação</h1>
 
-    <h1>🏆 CERTIFICADO DE CONCLUSÃO</h1>
+    <div class="conteudo">
 
-    <p class="texto">Certificamos que</p>
+        <h2>💡 O que é Programação?</h2>
 
-    <h2>Participante do Quiz</h2>
+        <p>
+            Programação é o processo de criar um conjunto de <strong>instruções lógicas</strong> que dizem ao computador exatamente o que ele deve fazer. Os computadores são máquinas incríveis, mas não pensam por si mesmos; eles precisam de um roteiro passo a passo, escrito de forma clara e organizada, para resolver problemas ou executar tarefas.
+        </p>
 
-    <p class="texto">
-        concluiu com sucesso o estudo sobre
-        Algoritmos, Fluxogramas e Pseudocódigo.
-    </p>
+        <p>
+            Essas instruções se transformam em softwares. Hoje, a programação está presente em tudo: nos sites que você navega, nos aplicativos do seu celular, nos jogos digitais, nos sistemas bancários e até no funcionamento de carros modernos e eletrodomésticos.
+        </p>
 
-    <h3>Junho de 2026</h3>
+        <h2>🧠 Como funciona na prática?</h2>
 
-    <div class="assinaturas">
+        <p>
+            Imagine que programar é muito parecido com <strong>escrever uma receita de bolo</strong>. Se você pular a etapa de "bater as claras em neve" ou colocar o bolo no forno antes de misturar a farinha, o resultado final dará errado.
+        </p>
 
-        <div>
-            <hr>
-            <p>Equipe do Projeto</p>
-        </div>
+        <p>
+            Na programação, nós dividimos um problema grande em partes menores (chamamos isso de pensamento computacional) e criamos algoritmos. Como o computador não entende o nosso idioma humano, nós usamos uma <strong>linguagem de programação</strong> (como Python, JavaScript ou C++) para traduzir essas ordens em algo que a máquina consiga processar e executar de forma automática e eficiente.
+        </p>
 
-        <div>
-            <hr>
-            <p>Professor Orientador</p>
-        </div>
+        <h2>🚀 A Importância da Programação</h2>
+
+        <p>
+            No mundo moderno, saber programar vai além de criar sistemas: desenvolve o raciocínio lógico e a capacidade de resolver problemas complexos. É a programação que permite automatizar tarefas repetitivas, processar volumes gigantescos de dados em segundos e conectar pessoas ao redor do mundo instantaneamente.
+        </p>
 
     </div>
 
-</div>
-        <div class="botoes">
-            <button onclick="window.print()" class="btn">
-                🖨 Imprimir Certificado
-            </button>
+    <section class="avaliacao">
+        <h2>📝 Teste seus conhecimentos</h2>
 
-            <a href="integrantes.html" class="btn">
-                🏠 Voltar ao Início
-            </a>
+        <p>1. O que é programação no contexto da tecnologia?</p>
+        <label><input type="radio" name="c1" value="0"> A) Apenas o ato de ligar e configurar componentes físicos de um computador.</label><br>
+        <label><input type="radio" name="c1" value="1"> B) O processo de criar instruções lógicas e organizadas para que o computador execute tarefas.</label><br>
+        <label><input type="radio" name="c1" value="0"> C) Um sistema de navegação na internet que substitui os navegadores comuns.</label>
 
-            <hr>
-            <hr>
-            <hr>
-            
-            <a href="Conclusao.html" class="btn">
-                Conclusão
-            </a>
-        </div>
+        <p>2. Podemos comparar a lógica de programação a qual situação do dia a dia?</p>
+        <label><input type="radio" name="c2" value="0"> A) Ao ato de olhar para uma foto antiga.</label><br>
+        <label><input type="radio" name="c2" value="1"> B) A uma receita de bolo, que exige um passo a passo ordenado para dar certo.</label><br>
+        <label><input type="radio" name="c2" value="0"> C) A dormir, pois o processo acontece de forma totalmente inconsciente.</label>
 
+        <button onclick="corrigirConceitos()">Ver Resultado</button>
+
+        <div id="resultadoConceitos"></div>
+    </section>
+
+    <script>
+        function calcular(prefixo, total, resultadoId){
+
+            let pontos = 0;
+
+            for(let i = 1; i <= total; i++){
+
+                let resposta = document.querySelector(
+                    `input[name="${prefixo}${i}"]:checked`
+                );
+
+                if(resposta){
+                    pontos += parseInt(resposta.value);
+                }
+            }
+
+            let mensagem = "";
+
+            // Como este questionário tem 2 perguntas, adaptei a lógica de feedback proporcionalmente
+            if(pontos === total){
+                mensagem = "🏆 Excelente! Você dominou o conteúdo.";
+            }
+            else if(pontos >= 1){
+                mensagem = "👍 Bom trabalho! Continue estudando.";
+            }
+            else{
+                mensagem = "📚 Revise o conteúdo e tente novamente.";
+            }
+
+            document.getElementById(resultadoId).innerHTML =
+                `<h3>${pontos}/${total} acertos</h3><p>${mensagem}</p>`;
+        }
+
+        function corrigirConceitos(){
+            calcular("c", 2, "resultadoConceitos");
+        }
+    </script>
+
+    <div class="botoes">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="historia.html" class="btn">⬅ Voltar</a>
+        <a href="fluxograma.html" class="btn">➡ Próximo</a>
     </div>
-
+ 
+    <div class="progresso">
+        <div class="barra" style="width:60%;">60%</div>
+    </div>
 </div>
-
 </body>
 </html>
