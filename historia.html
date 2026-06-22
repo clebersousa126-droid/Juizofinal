@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História dos Algoritmos</title>
+    <link rel="stylesheet" href="historia.css">
+</head>
+<body>
+<div class="container">
+    <div class="botoes">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="conceitos.html" class="btn">➡ Próximo</a>
+    </div>
+
+    <h1>📜 História dos Algoritmos</h1>
+
+    <div class="conteudo">
+
+        <h2>🧮 O início de tudo</h2>
+
+        <p>
+            A ideia de algoritmo existe há milhares de anos. Sempre que uma pessoa
+            segue uma sequência de passos para realizar uma tarefa, ela está usando
+            um algoritmo.
+        </p>
+
+        <h2>👳 Quem criou o termo?</h2>
+
+        <p>
+            O nome algoritmo surgiu a partir do matemático persa
+            Al-Khwarizmi, que viveu no século IX e contribuiu muito para o
+            desenvolvimento da matemática.
+        </p>
+
+        <h2>🏺 Antes dos computadores</h2>
+
+        <p>
+            Povos antigos já utilizavam procedimentos organizados para resolver
+            cálculos, construir cidades e planejar atividades.
+        </p>
+
+        <ul>
+            <li>🥖 Receita de pão</li>
+            <li>🏗️ Construção de monumentos</li>
+            <li>🧭 Navegação e orientação</li>
+        </ul>
+
+        <h2>💻 Era da Computação</h2>
+
+        <p>
+            Com o surgimento dos computadores, os algoritmos passaram a ser a base
+            da programação. Eles orientam o computador sobre o que fazer e em qual
+            ordem executar cada tarefa.
+        </p>
+
+        <h2>🚀 Algoritmos hoje</h2>
+
+        <ul>
+            <li>📱 Redes sociais</li>
+            <li>🎵 Aplicativos de música</li>
+            <li>🛒 Compras online</li>
+            <li>🗺️ GPS</li>
+            <li>🤖 Inteligência Artificial</li>
+        </ul>
+
+        <h2>🎯 Curiosidade</h2>
+
+        <p>
+            Escovar os dentes, preparar um café ou montar um computador são
+            exemplos de algoritmos do dia a dia, pois seguem uma sequência de
+            passos para alcançar um objetivo.
+        </p>
+
+    </div>
+    <section class="avaliacao">
+        <h2>📝 Teste seus conhecimentos</h2>
+
+        <p>1. Quem é considerado o pai dos algoritmos?</p>
+        <label><input type="radio" name="q1" value="1"> Al-Khwarizmi</label><br>
+        <label><input type="radio" name="q1" value="0"> Alan Turing</label>
+
+        <p>2. O termo algoritmo surgiu a partir do nome de:</p>
+        <label><input type="radio" name="q2" value="1"> Al-Khwarizmi</label><br>
+        <label><input type="radio" name="q2" value="0"> Aristóteles</label>
+
+        <p>3. Algoritmos existem apenas em computadores?</p>
+        <label><input type="radio" name="q3" value="0"> Sim</label><br>
+        <label><input type="radio" name="q3" value="1"> Não</label>
+
+        <p>4. Uma receita de bolo pode ser considerada:</p>
+        <label><input type="radio" name="q4" value="1"> Um algoritmo</label><br>
+        <label><input type="radio" name="q4" value="0"> Um hardware</label>
+
+        <button onclick="corrigirHistoria()">Ver Resultado</button>
+
+        <div id="resultadoHistoria"></div>
+    </section>
+
+    <script>
+        function calcular(prefixo, total, resultadoId){
+
+            let pontos = 0;
+
+            for(let i = 1; i <= total; i++){
+
+                let resposta = document.querySelector(
+                    `input[name="${prefixo}${i}"]:checked`
+                );
+
+                if(resposta){
+                    pontos += parseInt(resposta.value);
+                }
+            }
+
+            let mensagem = "";
+
+            if(pontos === 4){
+                mensagem = "🏆 Excelente! Você dominou o conteúdo.";
+            }
+            else if(pontos >= 2){
+                mensagem = "👍 Bom trabalho! Continue estudando.";
+            }
+            else{
+                mensagem = "📚 Revise o conteúdo e tente novamente.";
+            }
+
+            document.getElementById(resultadoId).innerHTML =
+                `<h3>${pontos}/4 acertos</h3><p>${mensagem}</p>`;
+        }
+
+        function corrigirHistoria(){
+            calcular("q",4,"resultadoHistoria");
+        }
+
+        function corrigirConceitos(){
+            calcular("c",4,"resultadoConceitos");
+        }
+
+        function corrigirFluxograma(){
+            calcular("f",4,"resultadoFluxograma");
+        }
+
+        function corrigirAplicacoes(){
+            calcular("a",4,"resultadoAplicacoes");
+        }
+    </script>
+    <div class="botoes">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+
+        <a href="conceitos.html" class="btn">➡ Próximo</a>
+    </div>
+ 
+    <div class="progresso">
+        <div class="barra" style="width:20%;">20%</div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
+

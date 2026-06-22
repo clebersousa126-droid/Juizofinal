@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicações dos Algoritmos</title>
+    <link rel="stylesheet" href="historia.css">
+</head>
+<body>
+<div class="botoes">
+    <a href="integrantes.html" class="btn">🏠 Home</a>
+    <a href="pseudocodigo.html" class="btn">⬅ Voltar</a>
+    <a href="quiz.html" class="btn">➡ Próximo</a>
+</div>
+
+<div class="container">
+
+    <h1>🚀 Aplicações dos Algoritmos</h1>
+
+    <div class="conteudo">
+
+        <h2>🌎 Algoritmos no Dia a Dia</h2>
+
+        <p>
+            Os algoritmos estão presentes em praticamente tudo o que fazemos atualmente.
+            Muitas vezes não percebemos, mas eles trabalham nos bastidores para facilitar
+            tarefas, organizar informações e tomar decisões automaticamente.
+        </p>
+
+        <h2>📱 Redes Sociais</h2>
+
+        <p>
+            Redes sociais utilizam algoritmos para analisar o comportamento dos usuários
+            e mostrar conteúdos personalizados.
+        </p>
+
+        <ul>
+            <li>Sugestão de vídeos e publicações</li>
+            <li>Recomendação de amigos</li>
+            <li>Organização do feed de notícias</li>
+            <li>Publicidade direcionada</li>
+        </ul>
+
+        <h2>🎵 Aplicativos de Música</h2>
+
+        <p>
+            Plataformas de streaming utilizam algoritmos para recomendar músicas
+            com base no gosto de cada usuário.
+        </p>
+
+        <ul>
+            <li>Playlists automáticas</li>
+            <li>Sugestões de artistas</li>
+            <li>Recomendações personalizadas</li>
+        </ul>
+
+        <h2>🗺️ GPS e Navegação</h2>
+
+        <p>
+            Aplicativos de navegação utilizam algoritmos para encontrar as melhores rotas.
+        </p>
+
+        <ul>
+            <li>Cálculo de caminhos mais rápidos</li>
+            <li>Desvio de congestionamentos</li>
+            <li>Estimativa de tempo de chegada</li>
+        </ul>
+
+        <h2>🛒 Comércio Eletrônico</h2>
+
+        <p>
+            Lojas virtuais utilizam algoritmos para sugerir produtos e melhorar a experiência do cliente.
+        </p>
+
+        <ul>
+            <li>Produtos recomendados</li>
+            <li>Ofertas personalizadas</li>
+            <li>Análise de comportamento de compra</li>
+        </ul>
+
+        <h2>🏦 Sistemas Bancários</h2>
+
+        <p>
+            Bancos utilizam algoritmos para garantir segurança e eficiência nas operações financeiras.
+        </p>
+
+        <ul>
+            <li>Detecção de fraudes</li>
+            <li>Transferências automáticas</li>
+            <li>Análise de crédito</li>
+        </ul>
+
+        <h2>🤖 Inteligência Artificial</h2>
+
+        <p>
+            A Inteligência Artificial depende diretamente dos algoritmos para aprender,
+            interpretar dados e tomar decisões.
+        </p>
+
+        <ul>
+            <li>Assistentes virtuais</li>
+            <li>Reconhecimento facial</li>
+            <li>Tradução automática</li>
+            <li>Chatbots inteligentes</li>
+        </ul>
+
+        <h2>🎮 Jogos Digitais</h2>
+
+        <p>
+            Os jogos utilizam algoritmos para controlar personagens, desafios e regras.
+        </p>
+
+        <ul>
+            <li>Movimentação dos personagens</li>
+            <li>Sistema de pontuação</li>
+            <li>Inteligência dos adversários</li>
+            <li>Geração de cenários</li>
+        </ul>
+
+        <h2>🏥 Área da Saúde</h2>
+
+        <p>
+            Na medicina, algoritmos ajudam profissionais a analisar exames e identificar padrões importantes.
+        </p>
+
+        <ul>
+            <li>Análise de exames</li>
+            <li>Diagnósticos assistidos por computador</li>
+            <li>Monitoramento de pacientes</li>
+        </ul>
+
+        <h2>🎯 Conclusão</h2>
+
+        <p>
+            Os algoritmos estão presentes em praticamente todas as tecnologias modernas.
+            Eles ajudam a resolver problemas, automatizar tarefas e tornar os sistemas
+            mais eficientes, sendo fundamentais para a sociedade digital atual.
+        </p>
+
+    </div>
+   
+    <section class="avaliacao">
+        <h2>📝 Teste seus conhecimentos</h2>
+
+        <p>1. Redes sociais usam algoritmos?</p>
+        <label><input type="radio" name="a1" value="1"> Sim</label><br>
+        <label><input type="radio" name="a1" value="0"> Não</label>
+
+        <p>2. Aplicativos de GPS utilizam algoritmos?</p>
+        <label><input type="radio" name="a2" value="1"> Sim</label><br>
+        <label><input type="radio" name="a2" value="0"> Não</label>
+
+        <p>3. Algoritmos ajudam em recomendações de vídeos?</p>
+        <label><input type="radio" name="a3" value="1"> Sim</label><br>
+        <label><input type="radio" name="a3" value="0"> Não</label>
+
+        <p>4. Algoritmos são usados apenas por programadores?</p>
+        <label><input type="radio" name="a4" value="0"> Sim</label><br>
+        <label><input type="radio" name="a4" value="1"> Não</label>
+
+        <button onclick="corrigirAplicacoes()">Ver Resultado</button>
+
+        <div id="resultadoAplicacoes"></div>
+    </section>
+    <script>
+        function calcular(prefixo, total, resultadoId){
+
+            let pontos = 0;
+
+            for(let i = 1; i <= total; i++){
+
+                let resposta = document.querySelector(
+                    `input[name="${prefixo}${i}"]:checked`
+                );
+
+                if(resposta){
+                    pontos += parseInt(resposta.value);
+                }
+            }
+
+            let mensagem = "";
+
+            if(pontos === 4){
+                mensagem = "🏆 Excelente! Você dominou o conteúdo.";
+            }
+            else if(pontos >= 2){
+                mensagem = "👍 Bom trabalho! Continue estudando.";
+            }
+            else{
+                mensagem = "📚 Revise o conteúdo e tente novamente.";
+            }
+
+            document.getElementById(resultadoId).innerHTML =
+                `<h3>${pontos}/4 acertos</h3><p>${mensagem}</p>`;
+        }
+
+        function corrigirHistoria(){
+            calcular("q",4,"resultadoHistoria");
+        }
+
+        function corrigirConceitos(){
+            calcular("c",4,"resultadoConceitos");
+        }
+
+        function corrigirFluxograma(){
+            calcular("f",4,"resultadoFluxograma");
+        }
+
+        function corrigirAplicacoes(){
+            calcular("a",4,"resultadoAplicacoes");
+        }
+    </script>
+    <div class="botoes">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="pseudocodigo.html" class="btn">⬅ Voltar</a>
+        <a href="quiz.html" class="btn">➡ Próximo</a>
+    </div>
+
+</div>
+<div class="progresso">
+    <div class="barra" style="width:100%;">100%</div>
+</div>
+</body>
+</html>
+

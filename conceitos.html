@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos de Programação</title>
+    <link rel="stylesheet" href="historia.css">
+</head>
+<body>
+
+<div class="container">
+
+    
+
+    <div class="botoes" style="margin-bottom: 30px;">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="historia.html" class="btn">⬅ Voltar</a>
+        <a href="fluxograma.html" class="btn">➡ Próximo</a>
+    </div>
+
+    <h1>📘 Conceito de Programação</h1>
+
+    <section>
+        <h2>💡 O que é Programação?</h2>
+        <p>
+            Programação é o processo de criar um conjunto de **instruções lógicas** que dizem ao computador exatamente o que ele deve fazer. Os computadores são máquinas incríveis, mas não pensam por si mesmos; eles precisam de um roteiro passo a passo, escrito de forma clara e organizada, para resolver problemas ou executar tarefas.
+        </p>
+        <p>
+            Essas instruções se transformam em softwares. Hoje, a programação está presente em tudo: nos sites que você navega, nos aplicativos do seu celular, nos jogos digitais, nos sistemas bancários e até no funcionamento de carros modernos e eletrodomésticos.
+        </p>
+    </section>
+
+    <section>
+        <h2>🧠 Como funciona na prática?</h2>
+        <p>
+            Imagine que programar é muito parecido com **escrever uma receita de bolo**. Se você pular a etapa de "bater as claras em neve" ou colocar o bolo no forno antes de misturar a farinha, o resultado final dará errado.
+        </p>
+        <p>
+            Na programação, nós dividimos um problema grande em partes menores (chamamos isso de pensamento computacional) e criamos algoritmos. Como o computador não entende o nosso idioma humano, nós usamos uma <strong>linguagem de programação</strong> (como Python, JavaScript ou C++) para traduzir essas ordens em algo que a máquina consiga processar e executar de forma automática e eficiente.
+        </p>
+    </section>
+
+    <section>
+        <h2>🚀 A Importância da Programação</h2>
+        <p>
+            No mundo moderno, saber programar vai além de criar sistemas: desenvolve o raciocínio lógico e a capacidade de resolver problemas complexos. É a programação que permite automatizar tarefas repetitivas, processar volumes gigantescos de dados em segundos e conectar pessoas ao redor do mundo instantaneamente.
+        </p>
+    </section>
+
+    <hr style="border: 1px solid #ddd; margin: 40px 0;">
+
+    <section class="avaliacao quiz">
+        <h2>📊 Teste seus Conhecimentos</h2>
+        <p>Responda às perguntas abaixo com base no que você acabou de aprender:</p>
+
+        <form id="quizForm">
+            <ol>
+                <li>
+                    <strong>O que é programação no contexto da tecnologia?</strong>
+                    <ul>
+                        <li><label><input type="radio" name="p1" value="errado"> A) Apenas o ato de ligar e configurar componentes físicos de um computador.</label></li>
+                        <li><label><input type="radio" name="p1" value="correto"> B) O processo de criar instruções lógicas e organizadas para que o computador execute tarefas.</label></li>
+                        <li><label><input type="radio" name="p1" value="errado"> C) Um sistema de navegação na internet que substitui os navegadores comuns.</label></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Podemos comparar a lógica de programação a qual situação do dia a dia?</strong>
+                    <ul>
+                        <li><label><input type="radio" name="p2" value="errado"> A) Ao ato de olhar para uma foto antiga.</label></li>
+                        <li><label><input type="radio" name="p2" value="correto"> B) A uma receita de bolo, que exige um passo a passo ordenado para dar certo.</label></li>
+                        <li><label><input type="radio" name="p2" value="errado"> C) A dormir, pois o processo acontece de forma totalmente inconsciente.</label></li>
+                    </ul>
+                </li>
+            </ol>
+
+            <button type="button" onclick="verificarRespostas()" style="background: #1565c0; color: white; font-weight: bold;">Enviar Respostas</button>
+        </form>
+
+        <div id="resultadoConceitos" style="margin-top: 20px;"></div>
+    </section>
+
+    <div class="botoes" style="margin-top: 40px;">
+        <a href="integrantes.html" class="btn">🏠 Home</a>
+        <a href="historia.html" class="btn">⬅ Voltar</a>
+        <a href="fluxograma.html" class="btn">➡ Próximo</a>
+    </div>
+
+</div>
+
+<script>
+    function verificarRespostas() {
+        // Pega as opções selecionadas
+        const p1 = document.querySelector('input[name="p1"]:checked');
+        const p2 = document.querySelector('input[name="p2"]:checked');
+        const resultadoDiv = document.getElementById('resultadoConceitos');
+
+        // Valida se o usuário respondeu todas as perguntas
+        if (!p1 || !p2) {
+            resultadoDiv.style.color = "#d32f2f";
+            resultadoDiv.innerHTML = "⚠️ Por favor, responda a todas as perguntas antes de enviar!";
+            return;
+        }
+
+        // Contabiliza os acertos
+        let acertos = 0;
+        if (p1.value === "correto") acertos++;
+        if (p2.value === "correto") acertos++;
+
+        // Exibe o feedback personalizado baseado no desempenho
+        if (acertos === 2) {
+            resultadoDiv.style.color = "#388e3c"; // Verde
+            resultadoDiv.innerHTML = "🎉 Parabéns! Você acertou 2 de 2 perguntas. Você compreendeu muito bem o conceito de programação e está pronto para o próximo nível!";
+        } else if (acertos === 1) {
+            resultadoDiv.style.color = "#f57c00"; // Laranja
+            resultadoDiv.innerHTML = "👍 Você acertou 1 de 2 perguntas. Dê uma revisada rápida no texto para fixar o conteúdo antes de avançar!";
+        } else {
+            resultadoDiv.style.color = "#d32f2f"; // Vermelho
+            resultadoDiv.innerHTML = "📚 Você não acertou nenhuma pergunta desta vez. Leia o conteúdo novamente com atenção, programação é questão de prática!";
+        }
+    }
+</script>
+<div class="progresso">
+    <div class="barra" style="width:60%;">60% Concluído</div>
+</div>
+
+</body>
+</html>
